@@ -1,43 +1,55 @@
-# Astro Starter Kit: Minimal
+# Portfolio personal
 
-```sh
-bun create astro@latest -- --template minimal
+Portfolio web de **[Tu nombre]**, desarrollador/a **[tu especialidad]**. Este sitio reúne una selección de proyectos, mi experiencia y las tecnologías con las que trabajo.
+
+La página funciona como carta de presentación profesional: muestra cómo pienso, qué construyo y cómo puedo aportar valor a un equipo o proyecto.
+
+## Sobre mí
+
+Soy **[tu profesión o rol]** con interés en **[tus áreas principales]**. Me gusta transformar ideas en productos claros, accesibles y mantenibles, prestando atención tanto a la experiencia de usuario como a la calidad técnica.
+
+Actualmente estoy **[trabajando en / buscando oportunidades como / aprendiendo]**.
+
+## Proyectos destacados
+
+| Proyecto | Descripción | Tecnologías |
+| --- | --- | --- |
+| [Nombre del proyecto] | [Qué problema resuelve y cuál fue tu aporte] | [Astro, JavaScript, etc.] |
+| [Nombre del proyecto] | [Qué problema resuelve y cuál fue tu aporte] | [Tecnologías] |
+| [Nombre del proyecto] | [Qué problema resuelve y cuál fue tu aporte] | [Tecnologías] |
+
+## Tecnologías
+
+- Astro
+- HTML y CSS
+- JavaScript
+- [Otra tecnología]
+
+## Desarrollo local
+
+Requisitos: Node.js `>=22.12.0`.
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El sitio estará disponible en `http://localhost:4321`.
 
-## 🚀 Project Structure
+Para generar y revisar una versión de producción:
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Contacto
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Portfolio: [tu sitio web]
+- LinkedIn: [tu perfil de LinkedIn]
+- GitHub: [tu usuario de GitHub]
+- Email: [tu email]
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Licencia
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El código de este proyecto se distribuye bajo la licencia [MIT](LICENSE). El contenido personal, las fotografías y las marcas pertenecen a sus respectivos propietarios.
