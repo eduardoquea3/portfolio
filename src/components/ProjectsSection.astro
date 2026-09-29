@@ -1,0 +1,17 @@
+---
+import SectionLabel from './SectionLabel.astro';
+
+const projects = [
+	{ number: '01', title: 'Lumen Studio', description: 'Sitio editorial para un estudio creativo que necesitaba convertir su proceso en una experiencia digital clara.', tags: ['Astro', 'CSS', 'Content'], color: 'bg-lime text-page', symbol: '◒' },
+	{ number: '02', title: 'Northstar', description: 'Dashboard de producto para transformar datos complejos en decisiones rápidas y accionables.', tags: ['React', 'TypeScript', 'API'], color: 'bg-[#d95d42] text-page', symbol: '✣' },
+	{ number: '03', title: 'Casa Marea', description: 'Identidad y tienda online para una marca local con foco en calidez, detalle y conversión.', tags: ['E-commerce', 'UX', 'JavaScript'], color: 'bg-[#e8d9be] text-page', symbol: '≈' },
+];
+---
+
+<section class="mx-auto w-[min(1120px,calc(100%-64px))] border-t border-line pb-[170px] pt-[25px] max-md:w-[calc(100%-40px)] max-md:pb-[100px]" id="proyectos">
+	<SectionLabel number="03" label="Selección" />
+	<div class="ml-[16.5%] mt-[70px] mb-[55px] flex items-end justify-between max-md:ml-0 max-md:mt-[50px] max-md:mb-[35px] max-md:block"><h2 class="font-display text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[.98] tracking-[-.08em]">Trabajo que<br /><span class="text-lime">habla por sí solo.</span></h2><a class="font-mono text-[.7rem] font-medium text-ink transition-colors hover:text-lime max-md:mt-[25px] max-md:inline-block" href="#contacto">¿Tenés una idea? <span class="ml-1 text-lime">↗</span></a></div>
+	<div class="ml-[16.5%] grid grid-cols-3 gap-[18px] max-md:ml-0 max-md:grid-cols-1 max-md:gap-[45px]">
+		{projects.map((project) => <article><div class={`relative flex h-[280px] items-center justify-center overflow-hidden p-[17px] max-md:h-[250px] ${project.color}`}><span class="absolute left-[17px] top-[17px] font-mono text-[.61rem]">{project.number}</span><div class="font-display text-[7rem] leading-[.8]">{project.symbol}</div><span class="absolute bottom-[17px] right-[17px] font-mono text-[.61rem]">Ver caso <b class="ml-[9px] text-base">↗</b></span></div><div class="pt-[21px]"><h3 class="font-display text-[1.35rem] font-semibold">{project.title}</h3><p class="my-[11px] max-w-[290px] text-[.78rem] leading-[1.55] text-[#90968a]">{project.description}</p><div class="flex flex-wrap gap-[7px]">{project.tags.map((tag) => <span class="border border-[#3b4436] px-2 py-[5px] font-mono text-[.59rem] text-[#9da398]">{tag}</span>)}</div></div></article>)}
+	</div>
+</section>

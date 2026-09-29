@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-labelledby="title">
+  <title>SQLModel</title>
+  <rect width="240" height="80" rx="8" fill="#fff"/>
+  <path fill="#7e56c2" d="M25 18c0-5 18-9 40-9s40 4 40 9v17c0 5-18 9-40 9s-40-4-40-9V18Zm0 25c0-5 18-9 40-9s40 4 40 9v17c0 5-18 9-40 9s-40-4-40-9V43Z"/>
+  <ellipse cx="65" cy="18" rx="40" ry="9" fill="#fff"/>
+  <ellipse cx="65" cy="43" rx="40" ry="9" fill="#fff"/>
+  <text x="112" y="53" fill="#333" font-family="Arial, sans-serif" font-size="31" font-weight="700">SQLModel</text>
+</svg>
