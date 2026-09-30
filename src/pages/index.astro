@@ -1,17 +1,37 @@
 ---
-
+import AboutSection from '../components/AboutSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import TechSection from '../components/TechSection.astro';
+import '../styles/global.css';
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Portfolio de Eduardo Quea Hancco, Full Stack Developer especializado en aplicaciones web, APIs y bases de datos." />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Eduardo Quea Hancco — Full Stack Developer</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="grain" aria-hidden="true"></div>
+		<Header />
+		<main>
+			<Hero />
+			<AboutSection />
+			<TechSection />
+			<ProjectsSection />
+			<ContactSection />
+		</main>
+		<SiteFooter />
 	</body>
 </html>

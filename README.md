@@ -43,6 +43,22 @@ npm run build
 npm run preview
 ```
 
+## Cloudflare Pages
+
+Project settings:
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Node version: `22.12.0`
+
+CLI deploy:
+
+```bash
+npm run deploy:cloudflare
+```
+
+Wrangler authenticates with your local Cloudflare session or environment-provided credentials; no account token is checked into this repository.
+
 ## Contacto
 
 - Portfolio: [tu sitio web]
