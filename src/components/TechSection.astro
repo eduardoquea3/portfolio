@@ -2,39 +2,46 @@
 import SectionLabel from './SectionLabel.astro';
 
 const technologies = [
-	{ name: 'JavaScript', type: 'Lenguaje', mark: 'JS', icon: 'https://svgl.app/library/javascript.svg' },
-	{ name: 'TypeScript', type: 'Lenguaje', mark: 'TS', icon: 'https://svgl.app/library/typescript.svg' },
-	{ name: 'Python', type: 'Lenguaje', mark: 'PY', icon: 'https://svgl.app/library/python.svg' },
-	{ name: 'C#', type: 'Lenguaje', mark: 'C#', icon: 'https://svgl.app/library/csharp.svg' },
-	{ name: 'Java', type: 'Lenguaje', mark: 'JV', icon: 'https://svgl.app/library/java.svg' },
-	{ name: 'React', type: 'Frontend', mark: 'RE', icon: 'https://svgl.app/library/react_dark.svg' },
-	{ name: 'Next.js', type: 'Frontend', mark: 'NX', icon: 'https://svgl.app/library/nextjs_icon_dark.svg' },
-	{ name: 'Astro', type: 'Frontend', mark: 'AS', icon: 'https://svgl.app/library/astro-icon-dark.svg' },
-	{ name: 'FastAPI', type: 'Backend', mark: 'FA', icon: 'https://svgl.app/library/fastapi.svg' },
-	{ name: 'NestJS', type: 'Backend', mark: 'NE', icon: 'https://svgl.app/library/nestjs.svg' },
-	{ name: 'MySQL', type: 'Database', mark: 'MY', icon: 'https://svgl.app/library/mysql-icon-dark.svg' },
-	{ name: 'PostgreSQL', type: 'Database', mark: 'PG', icon: 'https://svgl.app/library/postgresql.svg' },
-	{ name: 'SQLite', type: 'Database', mark: 'SQ', icon: 'https://svgl.app/library/sqlite.svg' },
-	{ name: 'MS SQL Server', type: 'Database', mark: 'MS', icon: 'https://svgl.app/library/sql-server.svg' },
-	{ name: 'MongoDB', type: 'Database', mark: 'MO', icon: 'https://svgl.app/library/mongodb-icon-dark.svg' },
-	{ name: 'Prisma', type: 'ORM', mark: 'PR', icon: 'https://svgl.app/library/prisma.svg' },
-	{ name: 'Drizzle', type: 'ORM', mark: 'DR', icon: 'https://svgl.app/library/drizzle-orm_dark.svg' },
-	{ name: 'TypeORM', type: 'ORM', mark: 'TO', icon: 'https://svgl.app/library/typeorm.svg' },
-	{ name: 'SQLModel', type: 'ORM', mark: 'SM', icon: '/icons/sqlmodel.svg' },
-	{ name: 'SQLAlchemy', type: 'ORM', mark: 'SA', icon: '/icons/sqlalchemy.svg' },
-	{ name: 'Claude Code', type: 'AI Tools', mark: 'CC', icon: 'https://svgl.app/library/claude-ai-icon.svg' },
-	{ name: 'OpenCode', type: 'AI Tools', mark: 'OC', icon: 'https://svgl.app/library/opencode-dark.svg' },
-	{ name: 'Codex', type: 'AI Tools', mark: 'CX', icon: 'https://svgl.app/library/codex_dark.svg' },
-	{ name: 'Docker', type: 'Tools', mark: 'DO', icon: 'https://svgl.app/library/docker.svg' },
-	{ name: 'Podman', type: 'Tools', mark: 'PO', icon: 'https://svgl.app/library/podman.svg' },
-	{ name: 'Git', type: 'Tools', mark: 'GI', icon: 'https://svgl.app/library/git.svg' },
+	{ name: 'JavaScript', category: 'Frontend', type: 'Lenguaje', mark: 'JS', icon: 'https://svgl.app/library/javascript.svg' },
+	{ name: 'TypeScript', category: 'Frontend', type: 'Lenguaje', mark: 'TS', icon: 'https://svgl.app/library/typescript.svg' },
+	{ name: 'React', category: 'Frontend', type: 'Librería UI', mark: 'RE', icon: 'https://svgl.app/library/react_dark.svg' },
+	{ name: 'Next.js', category: 'Frontend', type: 'Framework', mark: 'NX', icon: 'https://svgl.app/library/nextjs_icon_dark.svg' },
+	{ name: 'Astro', category: 'Frontend', type: 'Framework', mark: 'AS', icon: 'https://svgl.app/library/astro-icon-dark.svg' },
+	{ name: 'Python', category: 'Backend', type: 'Lenguaje', mark: 'PY', icon: 'https://svgl.app/library/python.svg' },
+	{ name: 'C#', category: 'Backend', type: 'Lenguaje', mark: 'C#', icon: 'https://svgl.app/library/csharp.svg' },
+	{ name: 'Java', category: 'Backend', type: 'Lenguaje', mark: 'JV', icon: 'https://svgl.app/library/java.svg' },
+	{ name: 'FastAPI', category: 'Backend', type: 'Framework', mark: 'FA', icon: 'https://svgl.app/library/fastapi.svg' },
+	{ name: 'NestJS', category: 'Backend', type: 'Framework', mark: 'NE', icon: 'https://svgl.app/library/nestjs.svg' },
+	{ name: 'MySQL', category: 'Bases de datos', type: 'Relacional', mark: 'MY', icon: 'https://svgl.app/library/mysql-icon-dark.svg' },
+	{ name: 'PostgreSQL', category: 'Bases de datos', type: 'Relacional', mark: 'PG', icon: 'https://svgl.app/library/postgresql.svg' },
+	{ name: 'SQLite', category: 'Bases de datos', type: 'Relacional', mark: 'SQ', icon: 'https://svgl.app/library/sqlite.svg' },
+	{ name: 'MS SQL Server', category: 'Bases de datos', type: 'Relacional', mark: 'MS', icon: 'https://svgl.app/library/sql-server.svg' },
+	{ name: 'MongoDB', category: 'Bases de datos', type: 'NoSQL', mark: 'MO', icon: 'https://svgl.app/library/mongodb-icon-dark.svg' },
+	{ name: 'Prisma', category: 'ORMs', type: 'ORM', mark: 'PR', icon: 'https://svgl.app/library/prisma.svg' },
+	{ name: 'Drizzle', category: 'ORMs', type: 'ORM', mark: 'DR', icon: 'https://svgl.app/library/drizzle-orm_dark.svg' },
+	{ name: 'TypeORM', category: 'ORMs', type: 'ORM', mark: 'TO', icon: 'https://svgl.app/library/typeorm.svg' },
+	{ name: 'SQLModel', category: 'ORMs', type: 'ORM', mark: 'SM', icon: '/sqlmodel.svg' },
+	{ name: 'SQLAlchemy', category: 'ORMs', type: 'ORM', mark: 'SA', icon: '/sqlalchemy.svg' },
+	{ name: 'Claude Code', category: 'IA / Herramientas de desarrollo', type: 'IA', mark: 'CC', icon: 'https://svgl.app/library/claude-ai-icon.svg' },
+	{ name: 'OpenCode', category: 'IA / Herramientas de desarrollo', type: 'IA', mark: 'OC', icon: 'https://svgl.app/library/opencode-dark.svg' },
+	{ name: 'Codex', category: 'IA / Herramientas de desarrollo', type: 'IA', mark: 'CX', icon: 'https://svgl.app/library/codex_dark.svg' },
+	{ name: 'Docker', category: 'DevOps / Infraestructura', type: 'Contenedores', mark: 'DO', icon: 'https://svgl.app/library/docker.svg' },
+	{ name: 'Podman', category: 'DevOps / Infraestructura', type: 'Contenedores', mark: 'PO', icon: '/podman.svg' },
+	{ name: 'Git', category: 'DevOps / Infraestructura', type: 'Control de versiones', mark: 'GI', icon: 'https://svgl.app/library/git.svg' },
 ];
+
+const categories = ['Frontend', 'Backend', 'Bases de datos', 'ORMs', 'IA / Herramientas de desarrollo', 'DevOps / Infraestructura'];
 ---
 
 <section class="mx-auto w-[min(1120px,calc(100%-64px))] border-t border-line pb-40 pt-[25px] max-md:w-[calc(100%-40px)] max-md:pb-[100px]" id="tecnologias">
-	<SectionLabel number="02" label="Herramientas" />
-	<div class="ml-[16.5%] mt-[70px] mb-[55px] flex items-end justify-between max-md:ml-0 max-md:mt-[50px] max-md:mb-[35px] max-md:block"><h2 class="font-display text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[.98] tracking-[-.08em]">Mi caja<br /><span class="text-lime">de herramientas.</span></h2><p class="mr-[10%] max-w-[190px] text-[.85rem] leading-[1.5] text-[#7d8378] max-md:mt-5">Las tecnologías cambian. La curiosidad por aprender, no.</p></div>
-	<div class="ml-[16.5%] grid grid-cols-3 border-t border-line max-md:ml-0 max-md:grid-cols-2">
-		{technologies.map((technology, index) => <div class="flex items-center gap-[15px] border-b border-line px-[14px] py-[22px] first:pl-0 odd:max-md:pr-[10px] md:[&:nth-child(3n+2)]:border-l md:[&:nth-child(3n+2)]:border-[#30382e] md:[&:nth-child(3n+2)]:pl-6 md:[&:nth-child(3n+3)]:border-l md:[&:nth-child(3n+3)]:border-[#30382e] md:[&:nth-child(3n+3)]:pl-6 max-md:even:border-l max-md:even:border-[#30382e] max-md:even:pl-[10px]"><span class="self-start font-mono text-[.6rem] text-[#687065] max-md:hidden">{String(index + 1).padStart(2, '0')}</span><span class="grid h-[42px] w-[42px] shrink-0 place-items-center bg-[#20271e] font-mono text-[.66rem] font-medium text-lime">{technology.icon ? <img class="h-[26px] w-[26px] object-contain" src={technology.icon} alt={`${technology.name} logo`} loading="lazy" /> : technology.mark}</span><div><h3 class="font-display text-base font-semibold max-md:text-[.82rem]">{technology.name}</h3><p class="mt-[5px] font-mono text-[.62rem] text-[#737a70]">{technology.type}</p></div><span class="ml-auto text-[1.1rem] text-[#737a70] max-md:hidden">↗</span></div>)}
+	<SectionLabel number="02" label="Tecnologías" />
+	<div class="ml-[16.5%] mt-[70px] mb-[55px] flex items-end justify-between max-md:ml-0 max-md:mt-[50px] max-md:mb-[35px] max-md:block"><h2 class="font-display text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[.98] tracking-[-.08em]">Tecnologías<br /><span class="text-lime">que uso.</span></h2><p class="mr-[10%] max-w-[220px] text-[.85rem] leading-[1.5] text-[#7d8378] max-md:mt-5">Frontend, backend y herramientas que forman parte de mi trabajo.</p></div>
+	<div class="ml-[16.5%] space-y-12 max-md:ml-0 max-md:space-y-9">
+		{categories.map((category) => <div>
+			<h3 class="mb-4 border-t border-line pt-4 font-mono text-[.7rem] font-medium uppercase tracking-[.08em] text-lime">{category}</h3>
+			<div class="grid grid-cols-3 max-md:grid-cols-2">
+				{technologies.filter((technology) => technology.category === category).map((technology, index) => <div class="flex items-center gap-[15px] border-b border-line px-[14px] py-[22px] md:[&:nth-child(3n+1)]:pl-0 md:[&:nth-child(3n+2)]:border-l md:[&:nth-child(3n+2)]:border-[#30382e] md:[&:nth-child(3n+2)]:pl-6 md:[&:nth-child(3n+3)]:border-l md:[&:nth-child(3n+3)]:border-[#30382e] md:[&:nth-child(3n+3)]:pl-6 max-md:[&:nth-child(2n+1)]:pl-0 odd:max-md:pr-[10px] max-md:even:border-l max-md:even:border-[#30382e] max-md:even:pl-[10px]"><span class="self-start font-mono text-[.6rem] text-[#687065] max-md:hidden">{String(index + 1).padStart(2, '0')}</span><span class="grid h-[42px] w-[42px] shrink-0 place-items-center bg-[#30382e] font-mono text-[.66rem] font-medium text-lime">{technology.icon ? <img class={`h-[26px] w-[26px] object-contain ${technology.name === 'SQLAlchemy' ? 'drop-shadow-[1px_0_0_#d6f45b] drop-shadow-[-1px_0_0_#d6f45b] drop-shadow-[0_1px_0_#d6f45b] drop-shadow-[0_-1px_0_#d6f45b]' : ''}`} src={technology.icon} alt={`${technology.name} logo`} loading="lazy" /> : technology.mark}</span><div><h4 class="font-display text-base font-semibold max-md:text-[.82rem]">{technology.name}</h4><p class="mt-[5px] font-mono text-[.62rem] text-[#737a70]">{technology.type}</p></div><span class="ml-auto text-[1.1rem] text-[#737a70] max-md:hidden">↗</span></div>)}
+			</div>
+		</div>)}
 	</div>
 </section>
