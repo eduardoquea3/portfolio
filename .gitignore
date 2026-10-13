@@ -7,8 +7,6 @@ dist/
 .atl/
 
 # Local environment files
-.env
-.env.*
 !.env.example
 
 # Logs
@@ -23,6 +21,6 @@ pnpm-debug.log*
 Thumbs.db
 
 # Editor files
-.vscode/
 .idea/
 *.swp
+config.bat
